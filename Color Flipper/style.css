@@ -1,0 +1,122 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #f4f4f9;
+  --text-color: #333;
+  --nav-color: #ffffff;
+  --btn-hover: #5a54e6;
+  --btn-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Navigation Bar */
+nav {
+  background: var(--nav-color);
+  padding: 1rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-center h4 {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  margin: 0 10px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Main Container */
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #f9f9ff;
+  box-shadow: 0px 4px 8px var(--btn-shadow);
+  transition: color 0.3s, background 0.3s;
+}
+
+.color {
+  font-weight: 600;
+}
+
+/* Button Styling */
+.btn-hero {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 6px 12px var(--btn-shadow);
+}
+
+.btn-hero:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+.btn-hero:active {
+  transform: scale(1);
+  box-shadow: 0px 3px 6px var(--btn-shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-hero {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
