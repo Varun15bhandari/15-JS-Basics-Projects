@@ -1,0 +1,140 @@
+/* Variables */
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #f4f4f9;
+    --nav-color: #ffffff;
+    --text-color: #333;
+    --btn-hover: #5a54e6;
+    --btn-shadow: rgba(0, 0, 0, 0.1);
+    --footer-bg: #333;
+    --footer-text: #fff;
+  }
+  
+  /* Global Reset */
+  *,
+  ::before,
+  ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  nav {
+    background: var(--nav-color);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .nav-center h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Main Content */
+  .container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .color {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .btn-hero {
+    background: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px var(--btn-shadow);
+  }
+  
+  .btn-hero:hover {
+    background: var(--btn-hover);
+    transform: translateY(-3px);
+  }
+  
+  .btn-hero:active {
+    transform: translateY(0);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-center {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    .btn-hero {
+      font-size: 0.9rem;
+      padding: 0.7rem 1.2rem;
+    }
+  }
+  
