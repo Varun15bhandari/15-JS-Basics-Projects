@@ -1,0 +1,132 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Root Variables */
+:root {
+  --clr-primary: hsl(220, 90%, 56%);
+  --clr-primary-hover: hsl(220, 90%, 50%);
+  --clr-secondary: hsl(200, 80%, 70%);
+  --clr-accent: hsl(150, 80%, 45%);
+  --clr-dark: hsl(220, 20%, 20%);
+  --clr-light: hsl(220, 50%, 95%);
+  --clr-danger: hsl(360, 67%, 44%);
+  --clr-neutral: hsl(0, 0%, 98%);
+  --radius: 12px;
+  --transition: all 0.3s ease-in-out;
+  --spacing: 0.1rem;
+}
+
+/* Reset Styles */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    135deg,
+    hsl(200, 70%, 90%),
+    hsl(150, 50%, 85%)
+  );
+  color: var(--clr-dark);
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Main Styles */
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Container */
+.container {
+  background: var(--clr-neutral);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 400px;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  color: var(--clr-primary);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Counter Display */
+#value {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--clr-dark);
+  display: block;
+  margin: 1rem 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  background: var(--clr-primary);
+  color: var(--clr-light);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  letter-spacing: var(--spacing);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--clr-primary-hover);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.decrease:hover {
+  background: var(--clr-danger);
+}
+
+.reset:hover {
+  background: var(--clr-neutral);
+  color: var(--clr-dark);
+}
+
+.increase:hover {
+  background: var(--clr-accent);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #value {
+    font-size: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
